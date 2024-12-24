@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pcmanager">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <uses-library android:name="org.apache.poi.util" android:required="false" />
+        <uses-library android:name="org.apache.poi.common" android:required="false" />
+        <uses-library android:name="org.apache.poi.hssf.util" android:required="false" />
+        <uses-library android:name="org.apache.poi.poifs.property" android:required="false" />
+        <uses-library android:name="org.apache.poi.hssf.usermodel.HSSFWorkbook" android:required="false" />
+
+        <activity android:name=".TestReportClicked"></activity>
+        <activity android:name=".TestReport" />
+        <activity android:name=".RepairCrackDamageClicked" />
+        <activity android:name=".RepairStrengthClicked" />
+        <activity android:name=".RepairConcreteClicked" />
+        <activity android:name=".RepairRebarClicked" />
+        <activity android:name=".RepairCoveringClicked" />
+        <activity android:name=".RepairMoldClicked" />
+        <activity android:name=".RepairCrackDamageList" />
+        <activity android:name=".RepairStrengthList" />
+        <activity android:name=".RepairConcreteList" />
+        <activity android:name=".RepairRebarList" />
+        <activity android:name=".RepairCoveringList" />
+        <activity android:name=".RepairMoldList" />
+        <activity android:name=".CrackDamageClicked" />
+        <activity android:name=".StrengthClicked" />
+        <activity android:name=".ConcreteClicked" />
+        <activity android:name=".RebarClicked" />
+        <activity android:name=".CrackDamage" />
+        <activity android:name=".DesignStrength" />
+        <activity android:name=".Strength" />
+        <activity android:name=".Concrete" />
+        <activity android:name=".Rebar" />
+        <activity android:name=".CoveringClicked" />
+        <activity android:name=".Covering" />
+        <activity android:name=".MoldClicked" />
+        <activity android:name=".Mold" />
+        <activity android:name=".ErrorOpen" />
+        <activity android:name=".ErrorStair" />
+        <activity android:name=".ErrorWall" />
+        <activity android:name=".ErrorColumn" />
+        <activity android:name=".RepairSizeClicked" />
+        <activity android:name=".RepairSizeList" />
+        <activity android:name=".ErrorSlab" />
+        <activity android:name=".ReqSize" />
+        <activity android:name=".ModulClickedL1" />
+        <activity android:name=".ModuleListL1" />
+        <activity android:name=".ErrorFloor" />
+        <activity android:name=".RequestedCheckUpActivity" />
+        <activity android:name=".RequestCheckUpActivity" />
+        <activity android:name=".L4Activity" />
+        <activity android:name=".L3Activity" />
+        <activity android:name=".ClientActivity" />
+        <activity android:name=".ProjectActivity" />
+        <activity android:name=".ErrorActivity" />
+        <activity android:name=".RepairActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity android:name=".L1Activity" />
+        <activity android:name=".L2Activity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.pcmanager.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+    </application>
+
+</manifest>
